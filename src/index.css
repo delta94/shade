@@ -6992,8 +6992,7 @@ body {
   font-stretch: normal;
   font-size: 16px;
   color: #00203FFF;
-  font-family: "Bellefair", serif;
-  font-weight: bold; }
+  font-family: "Nunito", serif; }
   body.modal-open {
     position: relative;
     overflow: hidden; }
@@ -7004,14 +7003,14 @@ body {
   width: 100%; }
 
 .heading, h1, .fs-1, h2, .fs-2, h3, .fs-3, h4, .fs-4, h5, .fs-5 {
-  font-family: "Bellefair", serif;
+  font-family: "Nunito", serif;
   font-weight: 400;
   color: #00203FFF; }
   .heading strong, h1 strong, .fs-1 strong, h2 strong, .fs-2 strong, h3 strong, .fs-3 strong, h4 strong, .fs-4 strong, h5 strong, .fs-5 strong {
     font-weight: 400; }
 
 .body, h6, p, .fs-6, label, input, .fs-7, small, .fs-8, .fs-9 {
-  font-family: "Bellefair", serif;
+  font-family: "Nunito", serif;
   font-weight: 300;
   color: #00203FFF; }
 

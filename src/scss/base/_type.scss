@@ -4,7 +4,7 @@
 
 // Type Defaults
 //// Base
-$hfont: 'Bellefair', serif!default;
+$hfont: 'Nunito', serif!default;
 $bfont: $hfont;
 $line-height-base: 1.16 !default;
 
@@ -47,7 +47,6 @@ body {
   font-size: 16px;
   color: $headingcolor;
   font-family: $bfont;
-  font-weight: bold;
 
   &.modal-open {
     position: relative;
