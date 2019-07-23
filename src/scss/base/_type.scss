@@ -2,15 +2,10 @@
 // Typography                                          //
 /////////////////////////////////////////////////////////
 
-// Geomanist-Bold
-// CeraRoundBasic-Regular
-// CeraRoundBasic-Medium
-// CeraRoundBasic-Bold
-
 // Type Defaults
 //// Base
-$hfont: "Geomanist", sans-serif !default;
-$bfont: "Cera Round", sans-serif !default;
+$hfont: 'Bellefair', serif!default;
+$bfont: $hfont;
 $line-height-base: 1.16 !default;
 
 //// Mobile Sizes
@@ -52,6 +47,7 @@ body {
   font-size: 16px;
   color: $headingcolor;
   font-family: $bfont;
+  font-weight: bold;
 
   &.modal-open {
     position: relative;
@@ -69,7 +65,7 @@ body {
 //// Defaults
 .heading {
   font-family: $hfont;
-  font-weight: 300;
+  font-weight: 400;
   color: $headingcolor;
 
   strong {
