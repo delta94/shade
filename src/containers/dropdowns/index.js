@@ -1,69 +1,30 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
 
-import Messages from "./Messages";
-import Notifications from "./Notifications";
-import Profile from "./Profile";
-
-/**
- * Need to render this component for every dropdown
- */
-
-
+import { renderDropDown } from './renderDropDown';
 
 const DropDowns = ({ dropDownArray }) => {
-  const [itemIndex, setItemIndex] = useState(new Set([]));
-
-  const onClickDropDown = e => {
-    const activeItem = new Set([]);
-    activeItem.add(e);
-    setItemIndex(activeItem);
-  };
+  const [itemName, setItemName] = useState(new Set([]));
 
   /**
-   * renderDropDown function
-   * whch render different component based on
-   * array items name
-   * @param {dropdown} takes item names
-   * @param {activeItemName} takes the name of the item which is clicked
+   * Listen click from component props
+   * store clicked component name to state
+   * to set active classname to the selected component
+   *
+   * @param {e} string
    */
+  const onClickDropDown = activeItem => {
+    const activeItemName = new Set([]);
 
-  const renderDropDown = (dropdown, activeItemName) => {
-    switch (dropdown) {
-      case "message":
-        return (
-          <Messages
-            key={1}
-            onClick={onClickDropDown}
-            active={activeItemName}
-          />
-        );
-      case "notification":
-        return (
-          <Notifications
-            key={2}
-            onClick={onClickDropDown}
-            active={activeItemName}
-          />
-        );
-      case "profile":
-        return (
-          <Profile
-            key={3}
-            onClick={onClickDropDown}
-            active={activeItemName}
-          />
-        );
-      default:
-        return;
-    }
+    activeItemName.add(activeItem);
+    setItemName(activeItemName);
   };
 
   return (
     <div className="dropdowns">
       {dropDownArray &&
-        dropDownArray.map(itemName =>
-          renderDropDown(itemName, itemIndex)
+        dropDownArray.map(item =>
+          renderDropDown(item, itemName, onClickDropDown)
         )}
     </div>
   );
