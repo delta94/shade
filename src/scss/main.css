@@ -7216,3 +7216,6 @@ header {
   height: 60px;
   background: #ADEFD1FF;
   padding: 0 30px; }
+
+.dropdowns {
+  display: flex; }

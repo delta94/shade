@@ -1,5 +1,12 @@
 import React from "react";
 
-const Notifications = () => <div>Notifications</div>;
+const Notifications = ({ onClick, active }) => (
+  <div
+    onClick={() => onClick('Notifications')}
+    className={active.has('Notifications') ? 'active' : ''}
+  >
+    Notifications
+  </div>
+);
 
 export default Notifications;
