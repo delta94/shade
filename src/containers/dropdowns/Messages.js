@@ -12,8 +12,8 @@ const Messages = ({ onClick, active }) => (
       <div className="content">
         some content
       </div>
-      <Link to="/messagesl" className="view-all">View All Message</Link>
 
+      <Link to="/messages" className="view-all">View All Message</Link>
     </div>
   </div>
 );
