@@ -10,7 +10,7 @@ import Profile from "./Profile";
  *
  * @param {dropdown} string item names
  * @param {activeItemName} string the name of the item which is clicked
- * @param {onClickDropDown} function which trigger onClick component event
+ * @param {onClickDropDown} function trigger onClick component event
  *
  * @return {Element} Return component based on dropdown item name
  */

@@ -4,27 +4,37 @@ import PropTypes from 'prop-types';
 import { renderDropDown } from './renderDropDown';
 
 const DropDowns = ({ dropDownArray }) => {
-  const [itemName, setItemName] = useState(new Set([]));
+  const [activeItemName, setActiveItemName] = useState(new Set([]));
 
   /**
    * Listen click from component props
    * store clicked component name to state
    * to set active classname to the selected component
    *
-   * @param {e} string
+   * @param {activeItem} string
    */
   const onClickDropDown = activeItem => {
-    const activeItemName = new Set([]);
+    const updateItemName = new Set([activeItemName]);
 
-    activeItemName.add(activeItem);
-    setItemName(activeItemName);
+    // If activeItemName already has the
+    // value of cliked item.
+    // Remove the value to perform toggle behavior
+    if (activeItemName.has(activeItem)) {
+      return setActiveItemName(new Set([]));
+    }
+
+    // Otherwise update activeItemName set with
+    // newly value.
+    updateItemName.add(activeItem);
+    setActiveItemName(updateItemName);
+    console.log(activeItemName);
   };
 
   return (
     <div className="dropdowns">
       {dropDownArray &&
         dropDownArray.map(item =>
-          renderDropDown(item, itemName, onClickDropDown)
+          renderDropDown(item, activeItemName, onClickDropDown)
         )}
     </div>
   );

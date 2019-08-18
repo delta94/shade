@@ -1,11 +1,13 @@
 import React from "react";
 
 const Notifications = ({ onClick, active }) => (
-  <div
-    onClick={() => onClick('Notifications')}
-    className={active.has('Notifications') ? 'active' : ''}
-  >
-    Notifications
+  <div className={active.has("Notifications") ? "active" : ""}>
+    <button
+      className="trigger-dropdown"
+      onClick={() => onClick("Notifications")}
+    >
+      <i className="fa fa-bell" />
+    </button>
   </div>
 );
 

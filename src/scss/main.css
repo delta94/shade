@@ -6613,7 +6613,7 @@ html {
     margin-right: 120px; } }
 
 a {
-  color: #ADEFD1FF;
+  color: #66fcf1;
   text-decoration: none; }
   a.link-secondary {
     color: #00203FFF; }
@@ -6756,13 +6756,13 @@ a:not([href]):not([tabindex]) {
   border: 1px solid #edbf0b; }
 
 .fc-highlight1 {
-  color: #ADEFD1FF !important; }
+  color: #66fcf1 !important; }
 
 .bg-highlight1 {
-  background-color: #ADEFD1FF !important; }
+  background-color: #66fcf1 !important; }
 
 .border-highlight1 {
-  border: 1px solid #ADEFD1FF; }
+  border: 1px solid #66fcf1; }
 
 .fc-highlight2 {
   color: #00203FFF !important; }
@@ -6801,13 +6801,13 @@ a:not([href]):not([tabindex]) {
   border: 1px solid #D72323; }
 
 .fc-primary {
-  color: #ADEFD1FF !important; }
+  color: #66fcf1 !important; }
 
 .bg-primary {
-  background-color: #ADEFD1FF !important; }
+  background-color: #66fcf1 !important; }
 
 .border-primary {
-  border: 1px solid #ADEFD1FF; }
+  border: 1px solid #66fcf1; }
 
 .fc-secondary {
   color: #00203FFF !important; }
@@ -7214,8 +7214,51 @@ hr {
 header {
   position: relative;
   height: 60px;
-  background: #ADEFD1FF;
+  background: #66fcf1;
   padding: 0 30px; }
 
 .dropdowns {
   display: flex; }
+  .dropdowns .trigger-dropdown {
+    outline: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 20px; }
+  .dropdowns .dropdown {
+    position: relative; }
+    .dropdowns .dropdown.active .dropdown-body {
+      opacity: 1;
+      visibility: visible;
+      transform: translate3d(0, 0, 0); }
+    .dropdowns .dropdown .dropdown-body {
+      position: absolute;
+      top: 43px;
+      right: 0;
+      width: 260px;
+      background: #F9F9F9;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 0 6px 2px rgba(14, 14, 14, 0.1);
+      transition: all 0.3s ease;
+      transform: translate3d(0, 20px, 0);
+      opacity: 0;
+      visibility: hidden; }
+      .dropdowns .dropdown .dropdown-body h5 {
+        text-align: center;
+        padding: 10px;
+        background: #CCEBF0;
+        font-weight: bold; }
+      .dropdowns .dropdown .dropdown-body .view-all {
+        padding: 10px;
+        display: block;
+        text-align: center;
+        border-top: 1px solid #CCEBF0;
+        color: #00203FFF;
+        font-weight: bold;
+        font-size: 13px;
+        background: #F2F2F2; }
+        .dropdowns .dropdown .dropdown-body .view-all:hover {
+          color: #66fcf1;
+          background: #00203FFF; }

@@ -1,0 +1,5 @@
+.dropdowns {
+  display: flex; }
+  .dropdowns .trigger-dropdown {
+    outline: 0;
+    border: 0; }
