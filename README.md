@@ -1,2 +1,3 @@
-Font: https://fonts.google.com/specimen/Maven+Pro
-and Open Sans
+### Run project
+  $npm install
+  $npm start
