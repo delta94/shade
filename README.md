@@ -9,3 +9,4 @@
 - [ ] Home page
 - [ ] E-commerce page
 - [ ] Ui Component pages
+- [ ] More
