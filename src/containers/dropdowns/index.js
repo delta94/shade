@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import PropTypes from 'prop-types';
 
 import { renderDropDown } from './renderDropDown';
+
+import useOutsideClick from '../../hooks/useOutsideClick';
 
 const DropDowns = ({ dropDownArray }) => {
   const [activeItemName, setActiveItemName] = useState(new Set([]));
@@ -27,11 +29,16 @@ const DropDowns = ({ dropDownArray }) => {
     // newly value.
     updateItemName.add(activeItem);
     setActiveItemName(updateItemName);
-    console.log(activeItemName);
   };
 
+  // Click outside event handler function and hook in play
+  const ref = useRef();
+  const clickOutside = () => setActiveItemName(new Set([]));
+  useOutsideClick(ref, clickOutside);
+
+
   return (
-    <div className="dropdowns">
+    <div className="dropdowns" ref={ref}>
       {dropDownArray &&
         dropDownArray.map(item =>
           renderDropDown(item, activeItemName, onClickDropDown)
